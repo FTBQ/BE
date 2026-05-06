@@ -6,78 +6,185 @@
   <title>Bullseye</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      background: #111;
+      background: #0a0a0f;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
+
     .container {
       position: relative;
       width: 1200px;
       height: 500px;
     }
+
     .container img {
       width: 1200px;
       height: 500px;
       display: block;
     }
 
-    /* ── 텍스트 위치 지정 ── */
-    .text-loc {
+    /* 공통 텍스트 스타일 */
+    .overlay {
       position: absolute;
-      top: 60px;        /* ← 원하는 위치로 조정 */
-      left: 80px;
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+      pointer-events: none;
+      white-space: nowrap;
     }
-    .text-time {
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+
+    /* ── 상단 4개 ── */
+    /* Date 아이콘 오른쪽 */
+    .txt-date {
+      top: 57px;
+      left: 250px;
+      font-size: 15px;
+      color: #c8d8f0;
+      letter-spacing: 1px;
     }
-    .text-stat {
-      position: absolute;
-      top: 60px;
-      right: 80px;
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+
+    /* Time 아이콘 오른쪽 */
+    .txt-time {
+      top: 110px;
+      left: 250px;
+      font-size: 15px;
+      color: #c8d8f0;
+      letter-spacing: 1px;
     }
+
+    /* Loc 아이콘 오른쪽 */
+    .txt-loc {
+      top: 57px;
+      left: 740px;
+      font-size: 15px;
+      color: #c8d8f0;
+      letter-spacing: 1px;
+    }
+
+    /* Class 아이콘 오른쪽 */
+    .txt-class {
+      top: 110px;
+      left: 740px;
+      font-size: 15px;
+      color: #c8d8f0;
+      letter-spacing: 1px;
+    }
+
+    /* ── 그룹 숫자 (제목 오른쪽) ── */
+    /* 세이길로스 */
+    .txt-g1num {
+      top: 198px;
+      left: 480px;
+      font-size: 15px;
+      color: #7ecfff;
+    }
+    /* 로스트 페이퍼 */
+    .txt-g2num {
+      top: 198px;
+      left: 1130px;
+      font-size: 15px;
+      color: #c97fff;
+    }
+    /* 속하지 않은자 */
+    .txt-g3num {
+      top: 348px;
+      left: 480px;
+      font-size: 15px;
+      color: #7ecfff;
+    }
+    /* 보리소프 패밀리 */
+    .txt-g4num {
+      top: 348px;
+      left: 1130px;
+      font-size: 15px;
+      color: #ff6b6b;
+    }
+
+    /* ── 멤버 상태 텍스트 ── */
+    /* 세이길로스 */
+    .txt-g1m1 { top: 262px; left: 200px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g1m2 { top: 262px; left: 390px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g1m3 { top: 292px; left: 200px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g1m4 { top: 292px; left: 390px;  font-size: 13px; color: #a0c4ff; }
+
+    /* 로스트 페이퍼 */
+    .txt-g2m1 { top: 262px; left: 750px;  font-size: 13px; color: #d9a0ff; }
+    .txt-g2m2 { top: 262px; left: 940px;  font-size: 13px; color: #d9a0ff; }
+    .txt-g2m3 { top: 292px; left: 750px;  font-size: 13px; color: #d9a0ff; }
+    .txt-g2m4 { top: 292px; left: 940px;  font-size: 13px; color: #d9a0ff; }
+
+    /* 속하지 않은자 */
+    .txt-g3m1 { top: 412px; left: 200px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g3m2 { top: 412px; left: 390px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g3m3 { top: 442px; left: 200px;  font-size: 13px; color: #a0c4ff; }
+    .txt-g3m4 { top: 442px; left: 390px;  font-size: 13px; color: #a0c4ff; }
+
+    /* 보리소프 패밀리 */
+    .txt-g4m1 { top: 412px; left: 750px;  font-size: 13px; color: #ff9999; }
+    .txt-g4m2 { top: 412px; left: 940px;  font-size: 13px; color: #ff9999; }
+    .txt-g4m3 { top: 442px; left: 750px;  font-size: 13px; color: #ff9999; }
+    .txt-g4m4 { top: 442px; left: 940px;  font-size: 13px; color: #ff9999; }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://raw.githubusercontent.com/FTBQ/BE/refs/heads/main/stt.png" alt="base">
-    <div class="text-loc" id="loc"></div>
-    <div class="text-time" id="time"></div>
-    <div class="text-stat" id="stat"></div>
+    <img src="https://github.com/FTBQ/BE/blob/main/stt.png?raw=true" alt="base">
+
+    <!-- 상단 4개 -->
+    <div class="overlay txt-date"  id="date"></div>
+    <div class="overlay txt-time"  id="time"></div>
+    <div class="overlay txt-loc"   id="loc"></div>
+    <div class="overlay txt-class" id="class"></div>
+
+    <!-- 그룹 숫자 -->
+    <div class="overlay txt-g1num" id="g1"></div>
+    <div class="overlay txt-g2num" id="g2"></div>
+    <div class="overlay txt-g3num" id="g3"></div>
+    <div class="overlay txt-g4num" id="g4"></div>
+
+    <!-- 세이길로스 멤버 -->
+    <div class="overlay txt-g1m1" id="g1m1"></div>
+    <div class="overlay txt-g1m2" id="g1m2"></div>
+    <div class="overlay txt-g1m3" id="g1m3"></div>
+    <div class="overlay txt-g1m4" id="g1m4"></div>
+
+    <!-- 로스트 페이퍼 멤버 -->
+    <div class="overlay txt-g2m1" id="g2m1"></div>
+    <div class="overlay txt-g2m2" id="g2m2"></div>
+    <div class="overlay txt-g2m3" id="g2m3"></div>
+    <div class="overlay txt-g2m4" id="g2m4"></div>
+
+    <!-- 속하지 않은자 멤버 -->
+    <div class="overlay txt-g3m1" id="g3m1"></div>
+    <div class="overlay txt-g3m2" id="g3m2"></div>
+    <div class="overlay txt-g3m3" id="g3m3"></div>
+    <div class="overlay txt-g3m4" id="g3m4"></div>
+
+    <!-- 보리소프 패밀리 멤버 -->
+    <div class="overlay txt-g4m1" id="g4m1"></div>
+    <div class="overlay txt-g4m2" id="g4m2"></div>
+    <div class="overlay txt-g4m3" id="g4m3"></div>
+    <div class="overlay txt-g4m4" id="g4m4"></div>
   </div>
 
   <script>
-    // URL에서 파라미터 읽기
-    const params = new URLSearchParams(window.location.search);
+    const p = new URLSearchParams(window.location.search);
 
-    const loc  = params.get('loc')  || '';
-    const time = params.get('time') || '';
-    const stat = params.get('stat') || '';
+    const ids = [
+      'date','time','loc','class',
+      'g1','g2','g3','g4',
+      'g1m1','g1m2','g1m3','g1m4',
+      'g2m1','g2m2','g2m3','g2m4',
+      'g3m1','g3m2','g3m3','g3m4',
+      'g4m1','g4m2','g4m3','g4m4'
+    ];
 
-    // 각 요소에 텍스트 삽입
-    document.getElementById('loc').textContent  = loc;
-    document.getElementById('time').textContent = time;
-    document.getElementById('stat').textContent = stat;
+    ids.forEach(id => {
+      const val = p.get(id);
+      if (val) document.getElementById(id).textContent = val;
+    });
   </script>
 </body>
 </html>
