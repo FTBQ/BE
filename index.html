@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bullseye</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      position: relative;
+      width: 1200px;
+      height: 500px;
+    }
+    .container img {
+      width: 1200px;
+      height: 500px;
+      display: block;
+    }
+
+    /* ── 텍스트 위치 지정 ── */
+    .text-loc {
+      position: absolute;
+      top: 60px;        /* ← 원하는 위치로 조정 */
+      left: 80px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    .text-time {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    .text-stat {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://raw.githubusercontent.com/FTBQ/BE/refs/heads/main/stt.png" alt="base">
+    <div class="text-loc" id="loc"></div>
+    <div class="text-time" id="time"></div>
+    <div class="text-stat" id="stat"></div>
+  </div>
+
+  <script>
+    // URL에서 파라미터 읽기
+    const params = new URLSearchParams(window.location.search);
+
+    const loc  = params.get('loc')  || '';
+    const time = params.get('time') || '';
+    const stat = params.get('stat') || '';
+
+    // 각 요소에 텍스트 삽입
+    document.getElementById('loc').textContent  = loc;
+    document.getElementById('time').textContent = time;
+    document.getElementById('stat').textContent = stat;
+  </script>
+</body>
+</html>
