@@ -27,105 +27,49 @@
       display: block;
     }
 
-    /* 공통 텍스트 스타일 */
     .overlay {
       position: absolute;
       font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
       pointer-events: none;
       white-space: nowrap;
+      color: #ffffff;
     }
 
     /* ── 상단 4개 ── */
-    /* Date 아이콘 오른쪽 */
-    .txt-date {
-      top: 57px;
-      left: 250px;
-      font-size: 15px;
-      color: #c8d8f0;
-      letter-spacing: 1px;
-    }
+    .txt-date  { top: 55px;  left: 258px; font-size: 14px; }
+    .txt-time  { top: 107px; left: 258px; font-size: 14px; }
+    .txt-loc   { top: 55px;  left: 745px; font-size: 14px; }
+    .txt-class { top: 107px; left: 745px; font-size: 14px; }
 
-    /* Time 아이콘 오른쪽 */
-    .txt-time {
-      top: 110px;
-      left: 250px;
-      font-size: 15px;
-      color: #c8d8f0;
-      letter-spacing: 1px;
-    }
+    /* ── 그룹 제목 옆 숫자 ── */
+    .txt-g1num { top: 200px; left: 465px;  font-size: 14px; }
+    .txt-g2num { top: 200px; left: 1110px; font-size: 14px; }
+    .txt-g3num { top: 352px; left: 465px;  font-size: 14px; }
+    .txt-g4num { top: 352px; left: 1110px; font-size: 14px; }
 
-    /* Loc 아이콘 오른쪽 */
-    .txt-loc {
-      top: 57px;
-      left: 740px;
-      font-size: 15px;
-      color: #c8d8f0;
-      letter-spacing: 1px;
-    }
+    /* ── 세이길로스 멤버 상태 ── */
+    .txt-g1m1 { top: 253px; left: 175px; font-size: 13px; }
+    .txt-g1m2 { top: 253px; left: 368px; font-size: 13px; }
+    .txt-g1m3 { top: 282px; left: 175px; font-size: 13px; }
+    .txt-g1m4 { top: 282px; left: 368px; font-size: 13px; }
 
-    /* Class 아이콘 오른쪽 */
-    .txt-class {
-      top: 110px;
-      left: 740px;
-      font-size: 15px;
-      color: #c8d8f0;
-      letter-spacing: 1px;
-    }
+    /* ── 로스트 페이퍼 멤버 상태 ── */
+    .txt-g2m1 { top: 253px; left: 718px; font-size: 13px; }
+    .txt-g2m2 { top: 253px; left: 895px; font-size: 13px; }
+    .txt-g2m3 { top: 282px; left: 718px; font-size: 13px; }
+    .txt-g2m4 { top: 282px; left: 895px; font-size: 13px; }
 
-    /* ── 그룹 숫자 (제목 오른쪽) ── */
-    /* 세이길로스 */
-    .txt-g1num {
-      top: 198px;
-      left: 480px;
-      font-size: 15px;
-      color: #7ecfff;
-    }
-    /* 로스트 페이퍼 */
-    .txt-g2num {
-      top: 198px;
-      left: 1130px;
-      font-size: 15px;
-      color: #c97fff;
-    }
-    /* 속하지 않은자 */
-    .txt-g3num {
-      top: 348px;
-      left: 480px;
-      font-size: 15px;
-      color: #7ecfff;
-    }
-    /* 보리소프 패밀리 */
-    .txt-g4num {
-      top: 348px;
-      left: 1130px;
-      font-size: 15px;
-      color: #ff6b6b;
-    }
+    /* ── 속하지 않은자 멤버 상태 ── */
+    .txt-g3m1 { top: 405px; left: 175px; font-size: 13px; }
+    .txt-g3m2 { top: 405px; left: 368px; font-size: 13px; }
+    .txt-g3m3 { top: 434px; left: 175px; font-size: 13px; }
+    .txt-g3m4 { top: 434px; left: 368px; font-size: 13px; }
 
-    /* ── 멤버 상태 텍스트 ── */
-    /* 세이길로스 */
-    .txt-g1m1 { top: 262px; left: 200px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g1m2 { top: 262px; left: 390px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g1m3 { top: 292px; left: 200px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g1m4 { top: 292px; left: 390px;  font-size: 13px; color: #a0c4ff; }
-
-    /* 로스트 페이퍼 */
-    .txt-g2m1 { top: 262px; left: 750px;  font-size: 13px; color: #d9a0ff; }
-    .txt-g2m2 { top: 262px; left: 940px;  font-size: 13px; color: #d9a0ff; }
-    .txt-g2m3 { top: 292px; left: 750px;  font-size: 13px; color: #d9a0ff; }
-    .txt-g2m4 { top: 292px; left: 940px;  font-size: 13px; color: #d9a0ff; }
-
-    /* 속하지 않은자 */
-    .txt-g3m1 { top: 412px; left: 200px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g3m2 { top: 412px; left: 390px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g3m3 { top: 442px; left: 200px;  font-size: 13px; color: #a0c4ff; }
-    .txt-g3m4 { top: 442px; left: 390px;  font-size: 13px; color: #a0c4ff; }
-
-    /* 보리소프 패밀리 */
-    .txt-g4m1 { top: 412px; left: 750px;  font-size: 13px; color: #ff9999; }
-    .txt-g4m2 { top: 412px; left: 940px;  font-size: 13px; color: #ff9999; }
-    .txt-g4m3 { top: 442px; left: 750px;  font-size: 13px; color: #ff9999; }
-    .txt-g4m4 { top: 442px; left: 940px;  font-size: 13px; color: #ff9999; }
+    /* ── 보리소프 패밀리 멤버 상태 ── */
+    .txt-g4m1 { top: 405px; left: 718px; font-size: 13px; }
+    .txt-g4m2 { top: 405px; left: 895px; font-size: 13px; }
+    .txt-g4m3 { top: 434px; left: 718px; font-size: 13px; }
+    .txt-g4m4 { top: 434px; left: 895px; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -144,25 +88,25 @@
     <div class="overlay txt-g3num" id="g3"></div>
     <div class="overlay txt-g4num" id="g4"></div>
 
-    <!-- 세이길로스 멤버 -->
+    <!-- 세이길로스 -->
     <div class="overlay txt-g1m1" id="g1m1"></div>
     <div class="overlay txt-g1m2" id="g1m2"></div>
     <div class="overlay txt-g1m3" id="g1m3"></div>
     <div class="overlay txt-g1m4" id="g1m4"></div>
 
-    <!-- 로스트 페이퍼 멤버 -->
+    <!-- 로스트 페이퍼 -->
     <div class="overlay txt-g2m1" id="g2m1"></div>
     <div class="overlay txt-g2m2" id="g2m2"></div>
     <div class="overlay txt-g2m3" id="g2m3"></div>
     <div class="overlay txt-g2m4" id="g2m4"></div>
 
-    <!-- 속하지 않은자 멤버 -->
+    <!-- 속하지 않은자 -->
     <div class="overlay txt-g3m1" id="g3m1"></div>
     <div class="overlay txt-g3m2" id="g3m2"></div>
     <div class="overlay txt-g3m3" id="g3m3"></div>
     <div class="overlay txt-g3m4" id="g3m4"></div>
 
-    <!-- 보리소프 패밀리 멤버 -->
+    <!-- 보리소프 패밀리 -->
     <div class="overlay txt-g4m1" id="g4m1"></div>
     <div class="overlay txt-g4m2" id="g4m2"></div>
     <div class="overlay txt-g4m3" id="g4m3"></div>
@@ -171,7 +115,6 @@
 
   <script>
     const p = new URLSearchParams(window.location.search);
-
     const ids = [
       'date','time','loc','class',
       'g1','g2','g3','g4',
@@ -180,7 +123,6 @@
       'g3m1','g3m2','g3m3','g3m4',
       'g4m1','g4m2','g4m3','g4m4'
     ];
-
     ids.forEach(id => {
       const val = p.get(id);
       if (val) document.getElementById(id).textContent = val;
